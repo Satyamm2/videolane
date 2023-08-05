@@ -1,0 +1,24 @@
+import React from 'react';
+import { Container, HStack, VStack, Input, Button } from '@chakra-ui/react';
+import { AiOutlineCloudUpload } from 'react-icons/ai';
+
+function Upload(){
+    return(
+        <>
+        <Container maxW={"container.xl"} h={"100vh"} p={"16"}>
+            <VStack color={"blue.500"} h={"full"} justifyContent={"center"}>
+                <AiOutlineCloudUpload size={"10vmx"} />
+
+                <form>
+                    <HStack>
+                        <Input required type={"file"} css={{"&::file-selector-button":{border:"none", width:"calc(100% + 36px)", height:"100%", marginLeft:"-18px", color:"blue", backgroundColor:"white", cursor:"pointer"}}}/>
+                        <Button colorScheme={"blue"} type={"submit"}>Upload</Button>
+                    </HStack>
+                </form>
+            </VStack>
+        </Container>
+        </>
+    );
+}
+
+export default Upload;
